@@ -1,0 +1,71 @@
+.div1{
+       align-items: center;
+       justify-content: center;
+       background: linear-gradient(to right,#62cff4, #2c67f2);
+       height: 100vh;
+       background-size: cover;
+       display: flex;
+       flex-direction: row;
+       
+}
+.div2{
+    height: 500px;
+    width: 450px;
+    background: url(logmg2.jpg);
+    background-size: 120%;
+    border-radius:8px 0px 0px 8px;
+}
+.h13{
+    margin-top: -50px;
+    color: black;
+    text-shadow: 0 0 2px yellow, 0 0 5px yellow;      
+}
+.loginsize{
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    width: 450px;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    border-radius:0px 8px 8px 0px;
+    
+}
+.loginbut{
+    border: none;
+    width: 350px;
+    height: 40px;
+    border: none;
+    border-bottom: 2px solid black;
+    background-color: transparent;
+}
+.logbut{
+    width: 100px;
+    height: 40px;
+    background-color: #2c67f2;
+    border: none;
+    border-radius: 8px;
+    font-size: 20px;
+    color: white;
+}
+@media (max-width:480px){
+    .div1{
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(to right,#62cff4, #2c67f2);
+        height: 100vh;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        
+ }   
+ 
+.div2{
+    height: 500px;
+    width: 450px;
+    background: url(logmg2.jpg);
+    background-size: 87%;
+    border-radius:8px 0px 0px 8px;
+}
+}

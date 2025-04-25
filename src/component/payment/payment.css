@@ -1,0 +1,152 @@
+.payment-page {
+  background: linear-gradient(to right, #ffe6f0, #fff0f5);
+  min-height: 100vh;
+  padding: 30px 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.payment-container {
+  max-width: 700px;
+  margin: auto;
+  background: white;
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  text-align: center;
+}
+
+.payment-heading {
+  color: #b30059;
+  font-size: 32px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.countdown-timer {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #cc0066;
+}
+
+.payment-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.iimage {
+  position: relative;
+}
+
+.payment-img {
+  width: 250px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+.overlay-nam {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  color: black;
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 18px;
+}
+.overlay-naam {
+  position: absolute;
+  bottom: 8px;
+  left: 0;
+  right: 0;
+  background: rgba(255, 192, 203, 0.7);
+  padding: 6px 0;
+  color: #800040;
+  font-weight: bold;
+  font-size: 18px;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+.price {
+  margin: 12px 0;
+  font-size: 24px;
+  font-weight: bold;
+  color: #cc0066;
+}
+
+.qr-container {
+  margin: 20px 0;
+}
+
+.qr-container p {
+  margin-top: 10px;
+  color: #4b004b;
+  font-weight: 500;
+}
+
+.transaction-details {
+  background: #fff5fa;
+  border: 2px dashed #cc3399;
+  padding: 20px;
+  border-radius: 16px;
+  width: 90%;
+  margin-top: 25px;
+  animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 10px #ff99cc;
+  }
+  to {
+    box-shadow: 0 0 20px #ff3399;
+  }
+}
+
+.input-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 6px;
+  color: #800040;
+  font-weight: 600;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 2px solid #cc3399;
+  border-radius: 10px;
+  font-size: 16px;
+  background-color: #fff0f5;
+  color: #660033;
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: #ff66b2;
+  background-color: #fff9fc;
+}
+
+.pay-btn {
+  margin-top: 20px;
+  background-color: #e60073;
+  color: white;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 25px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.pay-btn:hover {
+  background-color: #cc0052;
+}

@@ -1,0 +1,330 @@
+.headdiv {
+  height: 70px;
+  width: 100%;
+  background-color: lightgrey;
+  display: flex;
+}
+
+.logo1 {
+  height: 40px;
+  width: auto;
+  border-radius: 50%;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.flex {
+  display: flex;
+}
+
+.searchbar {
+  width: 500px;
+  height: 50px;
+  border: none;
+  margin-left: 130px;
+  margin-top: 10px;
+}
+
+.button {
+  height: 50px;
+  width: 50px;
+  border: none;
+  margin-top: 10px;
+  background-color: white;
+  padding: 0px;
+}
+
+.button-img:hover {
+  transform: scale(0.6);
+  transition: 0.5s ease;
+}
+
+.button-img {
+  height: 100%;
+  width: 100%;
+  transform: scale(0.5);
+}
+
+.wishimgspan {
+  height: auto;
+  width: 60px;
+  margin-left: 200px;
+}
+
+.wishlist-img {
+  height: 40px;
+  width: auto;
+  margin-left: 10px;
+  margin-top: 17px;
+  /* border-radius: 50%; */
+}
+
+.wishlist-img:hover {
+  transform: scale(1.05);
+  transition: 0.5s ease;
+}
+
+.profile-img {
+  height: 40px;
+  width: auto;
+  margin-top: 9px;
+  border-radius: 50%;
+  margin-left: 50px;
+}
+
+.background {
+  background-color: #3498db; /* Blue background */
+  height: 200px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text {
+  color: white;
+  font-size: 30px;
+  font-family: Arial, sans-serif;
+}
+
+.slider-sell {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.profile-container {
+  position: relative;
+  display: inline-block;
+}
+
+.profile-button {
+  font-size: 30px;
+  cursor: pointer;
+  padding: 10px;
+}
+
+/* Hidden slider by default */
+.slider {
+  position: absolute;
+  left: -160px; /* slide out to left */
+  top: 0;
+  width: 150px;
+  background-color: #333;
+  color: white;
+  padding: 15px;
+  border-radius: 10px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(-20px);
+  transition: all 0.3s ease;
+}
+
+/* On hover show the slider */
+.profile-container:hover .slider {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(0);
+}
+
+.slider ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.slider li {
+  padding: 10px 0;
+  cursor: pointer;
+}
+
+.profile {
+  position: relative;
+}
+
+.slider {
+  position: absolute;
+  left: 0; /* slide from left */
+  top: 100%;
+  width: auto;
+  background-color: black;
+  color: white;
+  display: none;
+  padding: 10px;
+  z-index: 10;
+  font-size: 15px;
+}
+
+.profile:hover .slider {
+  display: block;
+}
+
+/* Media Queries for different screen sizes */
+@media (max-width: 1024px) {
+  .headdiv {
+    height: 70px;
+    width: 100%;
+    background-color: lightgrey;
+    display: flex;
+  }
+
+  .searchbar {
+    width: 350px;
+    height: 40px;
+    border: none;
+    margin-left: 30px;
+    border-radius: 20px 0px 0px 20px;
+    margin-top: 20px;
+  }
+
+  .button {
+    height: 40px;
+    width: 40px;
+    border: none;
+    margin-top: 20px;
+    background-color: white;
+    border-radius: 0px 20px 20px 0px;
+  }
+
+  .wishimgspan {
+    height: auto;
+    width: 60px;
+    margin-left: 10px;
+  }
+
+  .wishlist-img {
+    height: 40px;
+    width: auto;
+    margin-left: 150px;
+    margin-top: 20px;
+  }
+
+  .profile-img {
+    height: 40px;
+    width: auto;
+    margin-top: 12px;
+    border-radius: 50%;
+    margin-left: -10px;
+  }
+
+  .slider {
+    position: absolute;
+    left: -120px; /* slide from left */
+    top: 100%;
+    width: 200px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 786px) {
+  .headdiv {
+    height: 90px;
+    width: 100%;
+    background-color: lightgrey;
+    display: flex;
+  }
+
+  .searchbar {
+    width: 300px;
+    height: 40px;
+    border: none;
+    margin-left: -180px;
+    border-radius: 20px 0px 0px 20px;
+    margin-top: 50px;
+  }
+
+  .button {
+    height: 40px;
+    width: 40px;
+    border: none;
+    margin-top: 50px;
+    background-color: white;
+    border-radius: 0px 20px 20px 0px;
+  }
+
+  .wishimgspan {
+    height: auto;
+    width: 60px;
+    margin-left: 10px;
+  }
+
+  .wishlist-img {
+    height: 40px;
+    width: auto;
+    margin-left: 150px;
+    margin-top: 40px;
+  }
+
+  .profile-img {
+    height: 40px;
+    width: auto;
+    margin-top: 32px;
+    border-radius: 50%;
+    margin-left: 0px;
+  }
+
+  .slider {
+    position: absolute;
+    left: -20px; /* slide from left */
+    top: 100%;
+    width: auto;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .headdiv {
+    height: 90px;
+    width: 100%;
+    background-color: lightgrey;
+    display: flex;
+  }
+
+  .searchbar {
+    width: 200px;
+    height: 40px;
+    border: none;
+    margin-left: -240px;
+    border-radius: 20px 0px 0px 20px;
+    margin-top: 40px;
+  }
+
+  .button {
+    height: 40px;
+    width: 40px;
+    border: none;
+    margin-top: 40px;
+    background-color: white;
+    border-radius: 0px 20px 20px 0px;
+  }
+
+  .wishimgspan {
+    height: auto;
+    width: 60px;
+    margin-left: -10px;
+  }
+
+  .wishlist-img {
+    height: 40px;
+    width: auto;
+    margin-left: 20px;
+    margin-top: 40px;
+  }
+
+  .profile-img {
+    height: 40px;
+    width: auto;
+    margin-top: 32px;
+    border-radius: 50%;
+    margin-left: 0px;
+  }
+
+  .slider {
+    position: absolute;
+    left: 0px; /* slide from left */
+    top: 100%;
+    width: 120px;
+    font-size: 10px;
+    margin-left: -50px;
+  }
+}

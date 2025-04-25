@@ -1,0 +1,207 @@
+.contact {
+    width: 100%;
+    height: fit-content;
+    padding: 25px;
+    background-color: black;
+}
+.contact>div{
+    display: flex;
+    flex-direction: row;
+}
+
+.contact-detail {
+    color: white;
+    text-align: left;
+    width: 50%;
+}
+
+.contact-details {
+    color: white;
+    font-size: 20px;
+}
+
+.image {
+    width: auto;
+    height: 30px;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.social-media {
+    color: white;
+    width: 50%;
+    text-align: left;
+
+}
+
+.pp {
+    color: white;
+    font-size: 20px;
+}
+
+.test {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.tast {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+@media (max-width:1024px) {
+    .contact {
+        width: 100%;
+        height: 500px;
+        background-color: black;
+        text-align: center;
+        justify-content: center;
+    }
+    
+    .contact-detail {
+        color: white;
+        margin-left: 70px;
+        text-align: center;
+    }
+    h1 {
+        color: grey;
+        margin-bottom: 20px;
+    }
+
+    .contact-details {
+        color: white;
+        font-size: 25px;
+    }
+
+    .image {
+        width: 30px;
+        height: auto;
+        margin-right: 10px;
+    }
+
+    .social-media {
+        color: white;
+        text-align: center;
+    }
+
+    .pp {
+        color: white;
+        font-size: 25px;
+    }
+
+    .test {
+        color: white;
+        text-decoration: none;
+        font-size: 21px;
+    }
+
+    .tast {
+        color: white;
+        text-decoration: none;
+        font-size: 15px;
+    }
+}
+
+@media (max-width:786px) {
+    .contact {
+        width: 100%;
+        height: 500px;
+        background-color: black;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .contact-detail {
+        color: white;
+        margin-left: 70px;
+        text-align: center;
+    }
+    h1 {
+        color: grey;
+        margin-bottom: 15px;
+    }
+
+    .contact-details {
+        color: white;
+    }
+
+    .image {
+        width: 25px;
+        height: auto;
+        margin-right: 10px;
+    }
+
+    .social-media {
+        color: white;
+        margin-left: 280px;
+        text-align: center;
+    }
+
+    .pp {
+        color: white;
+        font-size: 18px;
+    }
+
+    .test {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+    }
+
+    .tast {
+        color: white;
+        text-decoration: none;
+        font-size: 15px;
+    }
+
+}
+
+@media (max-width:480px) {
+    .contact {
+        width: 100%;
+        height: 400px;
+        background-color: black;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .contact-detail {
+        color: white;
+        margin-left: 30px;
+        text-align: center;
+    }
+
+    .contact-details {
+        color: grey;
+    }
+
+    .image {
+        width: 15px;
+        height: auto;
+        margin-right: 5px;
+    }
+
+    .social-media {
+        color: white;
+        margin-left: 80px;
+        text-align: center;
+    }
+
+    .pp {
+        color: grey;
+    }
+
+    .test {
+        color: white;
+        text-decoration: none;
+    }
+
+    .tast {
+        color: white;
+        text-decoration: none;
+        font-size: 10px;
+    }
+
+}

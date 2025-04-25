@@ -1,0 +1,164 @@
+@media (max-width: 500px) and (min-width:100px) {
+  .btn {
+    height: auto;
+    width: auto;
+  }
+  .button-group .btn {
+    font-size: small;
+  }
+  .naruto {
+    margin-left: 100px;
+    width: 100px;
+    border: none;
+    color: black;
+    font-size: large;
+    
+  }
+  .naruto:hover {
+    background-color: none;
+  }
+  .navbar-brand {
+    font-size: 30px;
+  }
+ }
+ 
+ @media (max-width:800px) and (min-width:510px){
+    .naruto {
+      margin-left: 100px;
+      width: 50px;
+      border: none;
+      color: black;
+      font-size: large;
+      
+    }
+    .naruto:hover {
+      background-color: none;
+    }
+  }
+ 
+ @media (max-width:1100px) and (min-width:810px){
+    .naruto {
+      margin-left: 50px;
+      width: 100px;
+      border: solid 3.5px black;
+      color: black;
+      font-size: large;
+      
+    }
+    .naruto:hover {
+      background-color: rgba(248, 113, 2, 0.863);
+      transition: 1s;
+    }
+  }
+ 
+ @media (min-width:1110px){
+         .naruto {
+          margin-left: 400px;
+          padding: 20px;
+          border: solid 3.5px black;
+          color: white;
+          border-radius: 0px;
+          border-right: 3.5px;
+          border-top: 3.5px;
+          border-left: 3.5px;
+          background-color: transparent;
+        }
+        /* .naruto:hover{
+          background-color: rgba(248, 113, 2, 0.863);
+          transition: 1s;
+        }  */
+ }
+ @media (min-width:510px) {
+        .btn{
+          height: auto;
+          width: 220px;
+        }
+        .button-group .btn{
+          font-size: 25px;
+        }
+        .navbar-brand {
+          font-size: 40px;
+        }
+        .naruto {
+          background-color: rgba(248, 113, 2, 0.863);
+        }
+       /* .naruto:hover{
+          background-color: rgba(248, 113, 2, 0.863);
+          transition: 1s;
+        } */
+        
+ }
+ .logo {
+  height: 40px;
+  width: auto;
+  border-radius: 50%;
+}
+.navbar-brand {
+  color: goldenrod;
+  font-weight: bold;
+}
+.img-fluid {
+  height: 680px;
+  width: 100%;
+}
+.btn {
+  margin-bottom: 150px;
+  background-color: white;
+  font-weight: bold;
+}
+/* Parent container for image */
+.pic {
+  position: relative; /* Allows absolute positioning inside */
+  display: inline-block; /* Keeps container size equal to image */
+  width: 100%; /* Optional: Make it responsive */
+}
+
+/* Image should be responsive */
+.pic img {
+  width: 100%; /* Ensures the image fills its container */
+  height: 680px;
+}
+.button-group {
+  position: absolute;
+  bottom: 20px; /* Moves buttons inside the image */
+  left: 50%;
+  transform: translateX(-50%); /* Centers buttons horizontally */
+  display: flex;
+  gap: 50px; /* Space between buttons */
+}
+.button-group .btn {
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  /* font-size: 25px; */
+  text-align: center;
+  border: solid 1px rgb(255, 85, 0);
+  transition: 1s;
+  z-index: 10; /* Ensures buttons appear above the image */
+}
+.button-group .btn:hover {
+  background-color: rgba(128, 255, 0.1); /* Darker on hover */
+}
+.but {
+  background-color: tomato;
+}
+.button-group .butt {
+  color: tomato;
+}
+.navbar {
+  background-color: rgba(205, 196, 196, 0.879) !important;
+}
+.nav-link {
+  font-size: 25px;
+  font-weight: bold;
+  margin-left: 100px;
+}
+.naruto{
+ 
+  border-radius: 0% 30% 0% 30%;
+  font-weight: bold;
+ 
+  
+}
+
