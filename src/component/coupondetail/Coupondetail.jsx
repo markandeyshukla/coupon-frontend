@@ -15,6 +15,8 @@ function CouponDetail() {
     navigate('/payment', { state: coupon });
   };
 
+  
+
   return (
     <div className='detail-page'>
       <button className="back-btn" onClick={() => navigate(-1)}>← Back</button>
