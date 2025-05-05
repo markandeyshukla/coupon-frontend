@@ -22,7 +22,7 @@ function CouponDetail() {
       <button className="back-btn" onClick={() => navigate(-1)}>← Back</button>
       <div className='detail-card'>
         <div className='nametext'>
-          <img src={`http://localhost:5000/uploads/${coupon.image}`} alt="Coupon" className='detail-img' />
+          <img src={`https://coupon-backend-32op.onrender.com/uploads/${coupon.image}`} alt="Coupon" className='detail-img' />
           <div className="overlay-name">{coupon.title}</div>
         </div>
         <h2>{coupon.title}</h2>

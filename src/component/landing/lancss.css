@@ -1,16 +1,18 @@
+
 .main {
       padding: 40px;
       display: flex;
       flex-wrap: wrap;
       gap: 70px;
-      margin-left: 50px;
+      justify-content: center;
+      /* margin-left: 50px; */
       /* background: linear-gradient(to right, #ffe6f0, #fff0f5); */
     }
     
     .spansize {
       height: auto;
       width: 250px;
-      margin-left: 30px;
+      /* margin-left: 30px; */
       text-decoration: none;
       color: black;
       text-align: center;
@@ -76,7 +78,7 @@
     }
     
     .namesize {
-      height: auto;
+      height: 48px;
       width: 250px;
       margin-top: 15px;
       font-family: 'Times New Roman', Times, serif;
@@ -122,13 +124,14 @@
       background-color: tomato;
       text-align: center;
       height: 40px;
-      transition: 1.5s;
+      /* transition: 1.5s; */
       font-weight: bold;
     }
     
     .buy:hover {
       color: white;
-      background-color: rgba(128, 255, 0.1);
+      /* background-color: rgba(128, 255, 0.1); */
       font-size: 20px;
+      background-color: green;
     }
     

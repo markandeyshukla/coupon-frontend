@@ -9,7 +9,7 @@ function Login() {
 
   const handleLogin = async () => {
     try {
-      const res = await fetch("http://localhost:5000/api/auth/login", {
+      const res = await fetch("https://coupon-backend-32op.onrender.com/api/auth/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
@@ -33,13 +33,13 @@ function Login() {
   };
 
   return (
-    <div className="div1">
-      <div className="div2" />
-      <div className="loginsize">
+    <div className="login-main">
+      <div className="login-image" />
+      <div className="login-form">
         <h1 className="h13">LOGIN</h1>
 
         <input
-          className="loginbut"
+          className="login-name"
           type="email"
           placeholder="Enter E-Mail"
           value={email}
@@ -47,14 +47,14 @@ function Login() {
         />
 
         <input
-          className="loginbut"
+          className="login-name"
           type="password"
           placeholder="Enter Password"
           value={password}
           onChange={(e) => setPass(e.target.value)}
         />
 
-        <button className="logbut" onClick={handleLogin}>
+        <button className="login-submit" onClick={handleLogin}>
           Login
         </button>
       </div>

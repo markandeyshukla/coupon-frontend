@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './signupcss.css';
 import './logmg1.jpg';
-import './beck.jpg';
 
 function Signup() {
     const navigate = useNavigate();
@@ -17,7 +16,7 @@ function Signup() {
         }
 
         try {
-            const response = await fetch('http://localhost:5000/api/auth/signup', {
+            const response = await fetch('https://coupon-backend-32op.onrender.com/api/auth/signup', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -39,33 +38,33 @@ function Signup() {
     };
 
     return (
-        <div className='div12'>
-            <div className='div22'></div>
-            <div className='loginsize2'>
-                <h1 className='h12'>SIGN UP</h1>
+        <div className='signup-main'>
+            <div className='signup-image'></div>
+            <div className='signup-form'>
+                <h1 className='h1'>SIGN UP</h1>
                 
-                    <input className='loginbut2'
+                    <input className='signup-name'
                      type="email" 
                      placeholder='Enter E-Mail' 
                      value={email} 
                      onChange={(e) => setEmail(e.target.value)} 
                      />
                 
-                    <input className='loginbut2' 
+                    <input className='signup-name' 
                     type="password" 
                     placeholder='Enter Password'
                      value={password} 
                      onChange={(e) => setPassword(e.target.value)} 
                      />
                 
-                    <input className='loginbut2' 
+                    <input className='signup-name' 
                     type="password" 
                     placeholder='Enter Password Again' 
                     value={confirmPassword} 
                     onChange={(e) => setConfirmPassword(e.target.value)} 
                     />
                 
-                <button className='logbut2' onClick={handleSignup}>
+                <button className='signup-submit' onClick={handleSignup}>
                     Signup
                     </button>
             </div>

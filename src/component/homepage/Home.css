@@ -1,214 +1,157 @@
-@media (max-width: 500px) and (min-width:100px) {
-    .btn {
+  .homepage-main{
+    height: 90vh;
+    width: 100%;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255, 201, 83);
+  }
+  .homepage-background-img {
+    height: 360px;
+    width: 40%;
+  }
+  .button-login-signup{ 
+          height: auto;
+          width: auto;
+          display: flex; 
+          gap: 50px;
+  }
+  
+  .homepage-login {
+    background: orange;
+    text-align: center;
+    font-size: 30px;
+    color: white;
+    width: 150px;
+    height: auto;
+    font-weight: bold;
+    text-decoration: none;
+}
+  .homepage-login:hover{
+     background-color: blue;
+  }
+  .homepage-signup {
+    background: orange;
+    text-align: center;
+    font-size: 30px;
+    color: white;
+    width: 150px;
+    height: auto;
+    font-weight: bold;
+    text-decoration: none;
+}
+  .homepage-signup:hover{
+    background-color: blue;
+  }
+  @media(max-width:1024px){
+    .homepage-login {
+      background: orange;
+      text-align: center;
+      font-size: 27px;
+      color: white;
+      width: 120px;
+      height: auto;
+      font-weight: bold;
+      text-decoration: none;
+  }
+  .homepage-signup {
+    background: orange;
+    text-align: center;
+    font-size: 27px;
+    color: white;
+    width: 120px;
+    height: auto;
+    font-weight: bold;
+    text-decoration: none;
+}
+.button-login-signup {
+  height: auto;
+  width: auto;
+  display: flex;
+  gap: 40px;
+  }
+  .homepage-background-img {
+    height: 300px;
+    width: 50%;
+}
+}
+  @media(max-width:786px){
+    .button-login-signup {
       height: auto;
       width: auto;
+      display: flex;
+      gap: 40px;
+  }
+  .homepage-background-img {
+    height: 274px;
+    width: 65%;
+}
+.homepage-login {
+  background: orange;
+  text-align: center;
+  font-size: 25px;
+  color: white;
+  width: 120px;
+  height: auto;
+  font-weight: bold;
+  text-decoration: none;
+}
+.homepage-signup {
+  background: orange;
+  text-align: center;
+  font-size: 25px;
+  color: white;
+  width: 120px;
+  height: auto;
+  font-weight: bold;
+  text-decoration: none;
+}
+}
+  @media(max-width:480px){
+    .homepage-main{
+      height: 90vh;
+      width: 100%;
+      position: relative;
+      align-items: center;
+      justify-content: center;
+      display: flex;
+      flex-direction: column;
+      background-color: rgb(255, 201, 83);
     }
-    .button-group .btn {
-      font-size: small;
+    .homepage-background-img{
+       height: 240px;
+       width: 100%;
     }
-    .naruto {
-      margin-left: 100px;
-      width: 100px;
-      border: none;
-      color: black;
-      font-size: large;
-      
-    }
-    .naruto:hover {
-      background-color: none;
-    }
-    .navbar-brand {
-      font-size: 30px;
-    }
-    .aaa {
-      position: absolute;
-      top: 140px; /* adjust this value */
-      left: 0px; /* adjust this value */
-      background-color: rgba(252, 186, 18, 0.999);
-      height: 50px;
-      width: 300px;
-      z-index: 1; /* below buttons if needed */
-    }
-   }
-   
-   @media (max-width:800px) and (min-width:510px){
-      .naruto {
-        margin-left: 100px;
-        width: 50px;
-        border: none;
-        color: black;
-        font-size: large;
-        
-      }
-      .naruto:hover {
-        background-color: none;
-      }
-      .aaa {
-        position: absolute;
-        top: 140px; /* adjust this value */
-        left: 0px; /* adjust this value */
-        background-color: rgba(252, 186, 18, 0.999);
-        height: 50px;
-        width: 500px;
-        z-index: 1; /* below buttons if needed */
-      }
-    }
-   
-   @media (max-width:1100px) and (min-width:810px){
-      .naruto {
-        margin-left: 50px;
-        width: 100px;
-        /* border: solid 3.5px black; */
-        color: black;
-        font-size: large;
-        
-      }
-      .naruto:hover {
-        background-color: rgba(248, 113, 2, 0.863);
-        transition: 1s;
-      }
-      .aaa {
-        position: absolute;
-        top: 0%; /* adjust this value */
-        left: 0px; /* adjust this value */
-        background-color: rgba(252, 186, 18, 0.999);
-        height: 50px;
-        width: 100%;
-        z-index: 1; /* below buttons if needed */
-      }
-    }
-   
-   @media (min-width:1110px){
-           .naruto {
-            margin-left: 200px;
-            padding: 20px;
-            border: solid 3.5px black;
-            color: white;
-            border-radius: 0px;
-            border-right: 3.5px;
-            border-top: 3.5px;
-            border-left: 3.5px;
-            background-color: transparent;
-          }
-          .sup{
-            margin-left: 170px;
-            margin-right: 170px;
-          }
-          /* .naruto:hover{
-            background-color: rgba(248, 113, 2, 0.863);
-            transition: 1s;
-          }  */
-          .aaa {
-            position: absolute;
-            top: 140px; /* adjust this value */
-            left: 0px; /* adjust this value */
-            background-color: rgba(252, 186, 18, 0.999);
-            height: 0%;
-            width: 100%;
-            z-index: 1; /* below buttons if needed */
-          }
-   }
-   @media (min-width:510px) {
-          .btn{
+    .button-login-signup{ 
             height: auto;
-            width: 220px;
-          }
-          .button-group .btn{
-            font-size: 25px;
-          }
-          .navbar-brand {
-            font-size: 40px;
-          }
-          .naruto {
-            background-color: rgba(248, 113, 2, 0.863);
-          }
-         /* .naruto:hover{
-            background-color: rgba(248, 113, 2, 0.863);
-            transition: 1s;
-          } */
-          .aaa {
-            position: absolute;
-            top: 140px; /* adjust this value */
-            left: 0px; /* adjust this value */
-            background-color: rgba(252, 186, 18, 0.999);
-            height: 50px;
-            width: 500px;
-            z-index: 1; /* below buttons if needed */
-          }
-          
-   }
-   .logo {
-    height: 40px;
-    width: auto;
-    border-radius: 50%;
-  }
-  .navbar-brand {
-    color: goldenrod;
-    font-weight: bold;
-  }
-  /* .img-flud {
-    height: 60vh;
-    width: 100%;
-  } */
-  .btn {
-    margin-bottom: 15%;
-    background-color: white;
-    font-weight: bold;
-  }
-  /* Parent container for image */
-  .pic {
-    position: relative; /* Allows absolute positioning inside */
-    display: inline-block; /* Keeps container size equal to image */
-    width: 100%; /* Optional: Make it responsive */
-    height: 60vh;
-  }
-  
-  /* Image should be responsive */
-   .pic img {
-    width: 100%; 
-    height: 60vh;
-  } 
-  .button-group {
-    position: absolute;
-    bottom: 20px; /* Moves buttons inside the image */
-    left: 50%;
-    transform: translateX(-50%); /* Centers buttons horizontally */
-    display: flex;
-    gap: 50px; /* Space between buttons */
-  }
-  .button-group .btn {
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    /* font-size: 25px; */
-    text-align: center;
-    border: solid 1px rgb(255, 85, 0);
-    transition: 1s;
-    z-index: 10; /* Ensures buttons appear above the image */
-  }
-  .button-group .btn:hover {
-    background-color: rgba(128, 255, 0.1); /* Darker on hover */
-  }
-  .but {
-    background-color: tomato;
-  }
-  .button-group .butt {
-    color: tomato;
-  }
-  .navbar {
-    background-color: rgba(205, 196, 196, 0.879) !important;
-  }
-  .nav-link {
-    font-size: 25px;
-    font-weight: bold;
-    /* margin-left: 100px; */
-  }
-  .naruto{
-   
-    border-radius: 0% 30% 0% 30%;
-    font-weight: bold;
-   
+            width: auto;
+            display: flex;
+            flex-direction: row; 
+    }
+    .homepage-login{ 
+      background: orange;
+      text-align: center;
+      padding: 10px;
+      font-size: 15px;
+      color: white;
+       width: 80px;
+       height: auto;
+       font-weight: bold;
+       text-decoration: none;
+    }
+    .homepage-signup{
+      background: orange;
+      text-align: center;
+      padding: 10px;
+      font-size: 15px;
+      color: white;
+       width: 80px;
+       height: auto;
+       font-weight: bold;
+       text-decoration: none;
+    }
     
+
   }
-  

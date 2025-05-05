@@ -16,7 +16,7 @@ function SearchPage() {
 
   useEffect(() => {
     const fetchResults = async () => {
-      const res = await fetch(`http://localhost:5000/api/coupons/search?q=${query}`);
+      const res = await fetch(`https://coupon-backend-32op.onrender.com/api/coupons/search?q=${query}`);
       const data = await res.json();
       setResults(data);
     };
@@ -45,7 +45,7 @@ function SearchPage() {
             <div className="search-img-container">
               <img
                 className="search-img"
-                src={`http://localhost:5000/uploads/${card.image}`}
+                src={`https://coupon-backend-32op.onrender.com/uploads/${card.image}`}
                 alt={card.title}
               />
               <div className="search-overlay-title">{card.title}</div>

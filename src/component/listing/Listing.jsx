@@ -43,7 +43,7 @@ function Listing() {
     };
 
     try {
-      const response = await fetch('http://localhost:5000/api/coupons', {
+      const response = await fetch('https://coupon-backend-32op.onrender.com/api/coupons', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -66,7 +66,7 @@ function Listing() {
 
   const fetchCoupons = async () => {
     try {
-      const response = await fetch('http://localhost:5000/api/coupons');
+      const response = await fetch('https://coupon-backend-32op.onrender.com/api/coupons');
       const data = await response.json();
       setCoupons(data);
     } catch (err) {

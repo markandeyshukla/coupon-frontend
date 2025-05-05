@@ -23,7 +23,7 @@ function Wishlist() {
               >
                 <img
                   className="w2"
-                  src={`http://localhost:5000/uploads/${item.coupon.image}`}
+                  src={`https://coupon-backend-32op.onrender.com/uploads/${item.coupon.image}`}
                   alt={item.coupon.title}
                 />
                 <div className="overlay-titl">{item.coupon.title}</div>

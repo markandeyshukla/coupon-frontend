@@ -69,7 +69,7 @@ function Payment() {
     };
 
     try {
-      const response = await fetch('http://localhost:5000/api/payment/confirm', {
+      const response = await fetch('https://coupon-backend-32op.onrender.com/api/payment/confirm', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -103,7 +103,7 @@ function Payment() {
 
         <div className="payment-card">
           <div className='iimage'>
-            <img src={`http://localhost:5000/uploads/${coupon.image}`} alt={coupon.title} className="payment-img" />
+            <img src={`https://coupon-backend-32op.onrender.com/uploads/${coupon.image}`} alt={coupon.title} className="payment-img" />
             <div className="overlay-nam">{coupon.title}</div>
             <div className="overlay-naam">{coupon.title}</div>
           </div>

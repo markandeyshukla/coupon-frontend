@@ -10,7 +10,7 @@ export const WishlistProvider = ({ children }) => {
     if (!token) return;
 
     try {
-      const res = await fetch('http://localhost:5000/api/wishlist/my', {
+      const res = await fetch('https://coupon-backend-32op.onrender.com/api/wishlist/my', {
         headers: { Authorization: `Bearer ${token}` }
       });
       const data = await res.json();
@@ -32,14 +32,14 @@ export const WishlistProvider = ({ children }) => {
 
     try {
       if (exists) {
-        await fetch(`http://localhost:5000/api/wishlist/remove/${coupon._id}`, {
+        await fetch(`https://coupon-backend-32op.onrender.com/api/wishlist/remove/${coupon._id}`, {
           method: 'DELETE',
           headers: { Authorization: `Bearer ${token}` }
         });
         setWishlist((prev) => prev.filter((w) => w?.coupon?._id !== coupon._id));
         // alert('Removed from wishlist');
       } else {
-        const res = await fetch('http://localhost:5000/api/wishlist/add', {
+        const res = await fetch('https://coupon-backend-32op.onrender.com/api/wishlist/add', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -51,7 +51,7 @@ export const WishlistProvider = ({ children }) => {
         if (res.ok) {
           const newItem = await res.json();
           setWishlist((prev) => [...prev, newItem]);
-          // alert('Added to wishlist');
+          alert('Added to wishlist');
         }
       }
     } catch (err) {

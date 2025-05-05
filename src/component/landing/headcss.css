@@ -1,35 +1,62 @@
-.headdiv {
-  height: 70px;
+.landing-navbar-fixed{
+  position:sticky;
+  z-index: 1;
+  top: 0;
+}
+.landing-header-main {
+  height: auto;
   width: 100%;
   background-color: lightgrey;
   display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
-
-.logo1 {
-  height: 40px;
+.landing-navbar-Container {
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between ;
+  align-items: center;
+  height: 70px;
+  width: 91%;
+}
+.landing-logo-name {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+.landing-navbar-logo {
+  height: 50px;
   width: auto;
   border-radius: 50%;
-  margin-left: 10px;
-  margin-top: 10px;
+  transition: transform 0.5s ease-in-out;
 }
-
+.landing-navbar-logo:hover {
+  transform: rotate(360deg); 
+}
+.landing-navbar-brand {
+  font-size: 34px;
+  font-weight: bold;
+  color: goldenrod;
+  text-decoration: none;
+}
+.landing-navbar-brand:hover{
+  color: black;
+}
 .flex {
   display: flex;
+  align-items: center;
 }
-
 .searchbar {
   width: 500px;
   height: 50px;
   border: none;
-  margin-left: 130px;
-  margin-top: 10px;
 }
 
 .button {
   height: 50px;
   width: 50px;
   border: none;
-  margin-top: 10px;
   background-color: white;
   padding: 0px;
 }
@@ -45,35 +72,31 @@
   transform: scale(0.5);
 }
 
-.wishimgspan {
-  height: auto;
-  width: 60px;
-  margin-left: 200px;
+.landing-navbar-icon {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: auto;
+  gap: 25%;
 }
 
-.wishlist-img {
+.landing-navbar-wishlist-icon {
   height: 40px;
   width: auto;
-  margin-left: 10px;
-  margin-top: 17px;
-  /* border-radius: 50%; */
 }
-
 .wishlist-img:hover {
   transform: scale(1.05);
   transition: 0.5s ease;
 }
 
-.profile-img {
+.landing-navbar-profile-icon {
   height: 40px;
   width: auto;
-  margin-top: 9px;
   border-radius: 50%;
-  margin-left: 50px;
 }
 
 .background {
-  background-color: #3498db; /* Blue background */
+  background-color: #3498db; 
   height: 200px;
   width: 100%;
   display: flex;
@@ -101,36 +124,20 @@
 .profile-button {
   font-size: 30px;
   cursor: pointer;
-  padding: 10px;
 }
 
-/* Hidden slider by default */
-.slider {
-  position: absolute;
-  left: -160px; /* slide out to left */
-  top: 0;
-  width: 150px;
-  background-color: #333;
-  color: white;
-  padding: 15px;
-  border-radius: 10px;
-  opacity: 0;
-  pointer-events: none;
-  transform: translateX(-20px);
-  transition: all 0.3s ease;
-}
-
-/* On hover show the slider */
 .profile-container:hover .slider {
   opacity: 1;
   pointer-events: auto;
   transform: translateX(0);
+  display: block;
 }
 
 .slider ul {
   list-style: none;
   padding: 0;
   margin: 0;
+  text-align: center;
 }
 
 .slider li {
@@ -138,193 +145,275 @@
   cursor: pointer;
 }
 
-.profile {
-  position: relative;
-}
 
 .slider {
-  position: absolute;
-  left: 0; /* slide from left */
-  top: 100%;
-  width: auto;
-  background-color: black;
-  color: white;
-  display: none;
-  padding: 10px;
-  z-index: 10;
   font-size: 15px;
+  position: absolute;
+  right: 0px;
+  min-width: 150px;
+  width: auto;
+  background-color: #333;
+  color: white;
+  padding: 15px;
+  border-radius: 10px;
+  opacity: 0; 
+  pointer-events: none; 
+  transform: translateX(-20px);
+  transition: all 0.3s ease;
+  z-index: 1;
 }
 
-.profile:hover .slider {
-  display: block;
-}
+.flex480{
+  display: none;
+ }
 
 /* Media Queries for different screen sizes */
 @media (max-width: 1024px) {
-  .headdiv {
-    height: 70px;
-    width: 100%;
-    background-color: lightgrey;
-    display: flex;
-  }
-
-  .searchbar {
-    width: 350px;
-    height: 40px;
-    border: none;
-    margin-left: 30px;
-    border-radius: 20px 0px 0px 20px;
-    margin-top: 20px;
-  }
-
-  .button {
-    height: 40px;
-    width: 40px;
-    border: none;
-    margin-top: 20px;
-    background-color: white;
-    border-radius: 0px 20px 20px 0px;
-  }
-
-  .wishimgspan {
-    height: auto;
-    width: 60px;
-    margin-left: 10px;
-  }
-
-  .wishlist-img {
+  .landing-navbar-logo {
     height: 40px;
     width: auto;
-    margin-left: 150px;
-    margin-top: 20px;
-  }
-
-  .profile-img {
-    height: 40px;
-    width: auto;
-    margin-top: 12px;
     border-radius: 50%;
-    margin-left: -10px;
-  }
-
-  .slider {
-    position: absolute;
-    left: -120px; /* slide from left */
-    top: 100%;
-    width: 200px;
-    font-size: 15px;
-  }
+    transition: transform 0.5s ease-in-out;
+}
+.landing-navbar-brand {
+  font-size: 25px;
+  font-weight: bold;
+  color: goldenrod;
+  text-decoration: none;
+}
+.searchbar {
+  width: 400px;
+  height: 50px;
+  border: none;
+}
+.landing-navbar-Container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  width: 91%;
+}
+.landing-navbar-icon {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: auto;
+  gap: 25px;
+}
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.slider {
+  font-size: 10px;
+  position: absolute;
+  right: 0px;
+  min-width: 110px;
+  width: auto;
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(-20px);
+  transition: all 0.3s ease;
+  z-index: 1;
+}
 }
 
 @media (max-width: 786px) {
-  .headdiv {
-    height: 90px;
-    width: 100%;
-    background-color: lightgrey;
-    display: flex;
-  }
-
   .searchbar {
-    width: 300px;
+    width: 250px;
     height: 40px;
     border: none;
-    margin-left: -180px;
+    margin-left: 0px;
     border-radius: 20px 0px 0px 20px;
-    margin-top: 50px;
+    margin-top: 0px;
+    
   }
-
   .button {
     height: 40px;
     width: 40px;
     border: none;
-    margin-top: 50px;
+    margin-top: 0px;
     background-color: white;
     border-radius: 0px 20px 20px 0px;
-  }
+ }
+ .landing-navbar-brand {
+  font-size: 20px;
+  font-weight: bold;
+  color: goldenrod;
+  text-decoration: none;
+}
+.landing-navbar-logo {
+  height: 35px;
+  width: auto;
+  border-radius: 50%;
+  transition: transform 0.5s ease-in-out;
+}
 
-  .wishimgspan {
-    height: auto;
-    width: 60px;
-    margin-left: 10px;
-  }
-
-  .wishlist-img {
-    height: 40px;
-    width: auto;
-    margin-left: 150px;
-    margin-top: 40px;
-  }
-
-  .profile-img {
-    height: 40px;
-    width: auto;
-    margin-top: 32px;
-    border-radius: 50%;
-    margin-left: 0px;
-  }
-
-  .slider {
-    position: absolute;
-    left: -20px; /* slide from left */
-    top: 100%;
-    width: auto;
-    font-size: 12px;
-  }
+.flex {
+  display: flex;
+  align-items: center;
+   width: auto;
+  
+}
+.landing-navbar-Container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  width: 91%;
+  gap: 25px;
+}
+.landing-navbar-icon {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: auto;
+  gap: 10px;
+}
+.profile-button {
+  font-size: 30px;
+  cursor: pointer;
+  padding: 10px;
+}
+.slider {
+  font-size: 10px;
+  position: absolute;
+  right: 0px;
+  min-width: 110px;
+  width: auto;
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(-20px);
+  transition: all 0.3s ease;
+  z-index: 1;
+}
 }
 
 @media (max-width: 480px) {
-  .headdiv {
-    height: 90px;
-    width: 100%;
-    background-color: lightgrey;
-    display: flex;
-  }
-
-  .searchbar {
-    width: 200px;
-    height: 40px;
-    border: none;
-    margin-left: -240px;
-    border-radius: 20px 0px 0px 20px;
-    margin-top: 40px;
-  }
-
-  .button {
-    height: 40px;
-    width: 40px;
-    border: none;
-    margin-top: 40px;
-    background-color: white;
-    border-radius: 0px 20px 20px 0px;
-  }
-
-  .wishimgspan {
-    height: auto;
-    width: 60px;
-    margin-left: -10px;
-  }
-
-  .wishlist-img {
-    height: 40px;
+  .landing-navbar-logo {
+    height: 30px;
     width: auto;
-    margin-left: 20px;
-    margin-top: 40px;
-  }
-
-  .profile-img {
-    height: 40px;
-    width: auto;
-    margin-top: 32px;
     border-radius: 50%;
-    margin-left: 0px;
-  }
-
-  .slider {
-    position: absolute;
-    left: 0px; /* slide from left */
-    top: 100%;
-    width: 120px;
-    font-size: 10px;
-    margin-left: -50px;
-  }
+    transition: transform 0.5s ease-in-out;
+}
+.landing-navbar-brand {
+    font-size: 17px;
+    font-weight: bold;
+    color: goldenrod;
+    text-decoration: none;
+}
+.landing-navbar-Container {
+  display: flex;
+  flex-direction: column;
+  justify-content: normal;
+  align-items: normal;
+  height: 70px;
+  width: 91%;
+}
+.searchbar {
+  width: 180px;
+  height: 28px;
+  border: none;
+  margin-left: 0%;
+  border-radius: 20px 0px 0px 20px;
+  margin-top: 0px;
+}
+.button {
+  height: 28px;
+  width: 28px;
+  border: none;
+  margin-top: 0px;
+  background-color: white;
+  border-radius: 0px 20px 20px 0px;
+}
+.landing-logo-name {
+  display: flex;
+  flex-direction: row;
+  gap: 2px;
+  height: 32px;
+  padding: 1%;
+}
+.landing-navbar-icon {
+  display: none;
+}
+.flex {
+  display: none;
+}
+.landing-navbar-profile-icon480 {
+  height: 30px;
+  width: auto;
+  border-radius: 50%;
+}
+.landing-navbar-wishlist-icon480 {
+  height: 30px;
+  width: auto;
+  border-radius: 50%;
+}
+.profile-button480 {
+  font-size: 0px;
+  cursor: pointer;
+  padding: 10px;
+}
+.slider480 {
+  font-size: 10px;
+  position: absolute;
+  right: 0px;
+  min-width: 110px;
+  width: auto;
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(-20px);
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+.flex480 {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  height: 30px;
+  width: auto;
+  margin-top: -20px;
+}
+.landing-navbar-icon480 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: auto;
+  height: 30px;
+}
+.profile-container480 {
+  position: relative;
+  display: inline-block;
+}
+.profile-container480:hover .slider480 {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(0);
+  display: block;
+}
+.slider480 li {
+  padding: 10px 0;
+  cursor: pointer;
+}
+.slider480 ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
 }

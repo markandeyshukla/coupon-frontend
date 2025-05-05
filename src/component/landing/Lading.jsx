@@ -11,7 +11,7 @@ function Landing() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('http://localhost:5000/api/coupons')
+    fetch('https://coupon-backend-32op.onrender.com/api/coupons')
       .then((res) => res.json())
       .then((data) => {
         setCardData(data);
@@ -28,7 +28,7 @@ function Landing() {
     wishlist.some((item) => item?.coupon?._id === card._id);
 
   if (loading) {
-    return <div>Trafic Lga Hai La rhe hai Tumhara data</div>;
+    return <div>Loading....</div>;
   }
 
   return (
@@ -43,7 +43,7 @@ function Landing() {
           <div className="img-container">
             <img
               className="imgsize"
-              src={`http://localhost:5000/uploads/${card.image}`}
+              src={`https://coupon-backend-32op.onrender.com/uploads/${card.image}`}
               alt={card.title}
             />
             <div className="overlay-title">{card.title}</div>
@@ -90,7 +90,7 @@ function Landing() {
           </div>
         </Link>
       ))}
-    </div>
+</div>
   );
 }
 
