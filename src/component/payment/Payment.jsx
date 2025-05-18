@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
+import { toast } from "react-toastify";
 import { QRCodeCanvas } from 'qrcode.react';
 import './payment.css';
 
@@ -17,7 +18,7 @@ function Payment() {
     const token = localStorage.getItem('token'); // Get token from localStorage
     if (!token) {
       setIsAuthenticated(false);
-      alert('Please login first to proceed to payment.');
+      toast.warn('Please login first to proceed to payment.');
       navigate('/'); // Redirect to login page as your login path is '/'
     } else {
       setIsAuthenticated(true);
@@ -27,7 +28,7 @@ function Payment() {
       setCountdown((prevTime) => {
         if (prevTime <= 1) {
           clearInterval(interval);
-          alert("Payment not confirmed in time. Redirecting to landing page.");
+          toast.warn("Payment not confirmed in time. Redirecting to landing page.");
           navigate('/landing');
           return 0;
         }
@@ -50,13 +51,13 @@ function Payment() {
 
   const handlePayment = async () => {
     if (!transactionID || !payerName) {
-      alert("Please fill in the Transaction ID and Payer's Name.");
+      toast.warn("Please fill in the Transaction ID and Payer's Name.");
       return;
     }
 
     const token = localStorage.getItem('token'); // ✅ Get the token from localStorage
     if (!token) {
-      alert('Please login first.');
+      toast.warn('Please login first.');
       navigate('/');
       return;
     }
@@ -79,13 +80,13 @@ function Payment() {
       });
 
       if (response.ok) {
-        alert("Payment Successful! We'll send the coupon details to your registered email.");
+        toast.success("Payment Successful! We'll send the coupon details to your registered email.");
         navigate('/landing');
       } else {
-        alert("Error in processing payment. Please try again.");
+        toast.warn("Error in processing payment. Please try again.");
       }
     } catch (error) {
-      alert("An error occurred. Please try again.");
+      toast.error("An error occurred. Please try again.");
     }
   };
 

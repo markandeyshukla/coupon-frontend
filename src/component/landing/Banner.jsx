@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './bcss.css';
 
-const images = ['/backbanner1.jpg', '/backbanner2.jpg', '/backbanner3.jpg', '/backbanner4.jpg', '/backbanner5.jpg'];
+const images = ['/backbanner1.jpg', '/backbanner2.jpg', '/backbanner3.jpg'];
 
 function Banner() {
   const [currentIndex, setCurrentIndex] = useState(0);

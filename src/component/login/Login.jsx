@@ -1,11 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 import "./logincss.css";
 
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPass] = useState("");
   const navigate = useNavigate();
+  const passwordRef = useRef(null);
+  const loginButtonRef = useRef(null); // ✅ Ref for animation
 
   const handleLogin = async () => {
     try {
@@ -19,16 +22,39 @@ function Login() {
 
       const data = await res.json();
       if (res.ok) {
-        localStorage.setItem("token", data.token);          // Save token
-        localStorage.setItem("userEmail", email);           // Save email directly from user input
-        // alert("Login successful!");
-        navigate("/landing");                               // Navigate to landing or profile page
+        localStorage.setItem("token", data.token);
+        localStorage.setItem("userEmail", email);
+        toast.success("Login successful!");
+        navigate("/landing");
       } else {
-        alert(data.message || "Login failed");
+        toast.warn(data.message || "Login failed");
       }
     } catch (err) {
       console.error(err);
-      alert("Something went wrong");
+      toast.error("Something went wrong");
+    }
+  };
+
+  // ✅ Animation trigger on Enter press
+  const triggerLoginFeedback = () => {
+    if (loginButtonRef.current) {
+      loginButtonRef.current.classList.add("active-press");
+      setTimeout(() => {
+        loginButtonRef.current.classList.remove("active-press");
+      }, 200);
+    }
+  };
+
+  const handleKeyDownEmail = (e) => {
+    if (e.key === "Enter") {
+      passwordRef.current.focus();
+    }
+  };
+
+  const handleKeyDownPassword = (e) => {
+    if (e.key === "Enter") {
+      triggerLoginFeedback(); // ✅ Animate the button
+      handleLogin();
     }
   };
 
@@ -44,6 +70,7 @@ function Login() {
           placeholder="Enter E-Mail"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
+          onKeyDown={handleKeyDownEmail}
         />
 
         <input
@@ -52,11 +79,25 @@ function Login() {
           placeholder="Enter Password"
           value={password}
           onChange={(e) => setPass(e.target.value)}
+          ref={passwordRef}
+          onKeyDown={handleKeyDownPassword}
         />
 
-        <button className="login-submit" onClick={handleLogin}>
+        <button
+          className="login-submit"
+          onClick={handleLogin}
+          ref={loginButtonRef} // ✅ ref attached
+        >
           Login
         </button>
+
+        <p
+          className="signup-link"
+          onClick={() => navigate("/signup")}
+          style={{ cursor: "pointer", marginTop: "1rem", color: "#007bff" }}
+        >
+          New user? <strong>Signup</strong>
+        </p>
       </div>
     </div>
   );

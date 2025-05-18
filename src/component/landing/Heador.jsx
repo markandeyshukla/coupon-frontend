@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { IoMdSearch } from "react-icons/io";
 import { CgProfile } from "react-icons/cg";
 import { BsFillBagHeartFill } from "react-icons/bs";
+import { toast } from "react-toastify";
 import "./headcss.css";
 
 function Heador() {
@@ -24,7 +25,7 @@ function Heador() {
   const handleSellCoupon = () => {
     const token = localStorage.getItem('token');
     if (!token) {
-      alert("Please login to sell a coupon.");
+      toast.warn("Please login to sell a coupon.");
     } else {
       navigate("/listing");
     }

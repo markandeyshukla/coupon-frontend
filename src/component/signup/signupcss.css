@@ -47,6 +47,33 @@
     font-size: 20px;
     color: white;
 }
+.signup-submit:hover{
+    transform: scale(0.95);
+  /* background-color: #0056b3; */
+  background-color: green;
+  /* box-shadow: 0 0 10px #007bff; */
+  transition: all 0.2s ease;
+}
+.signup-submit.active-press {
+  transform: scale(0.95);
+  /* background-color: #0056b3; */
+  background-color: green;
+  /* box-shadow: 0 0 10px #007bff; */
+  transition: all 0.2s ease;
+}
+.login-link {
+  font-size: 14px;
+  color: #007bff;
+  margin-top: 10px;
+  text-align: center;
+  cursor: "pointer";
+  transition: color 0.3s ease;
+}
+
+.login-link:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
 @media (max-width:786px){
     .signup-main{
         align-items: center;

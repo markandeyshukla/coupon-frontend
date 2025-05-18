@@ -22,6 +22,9 @@
     color: white;
     text-align: center;
     width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .contact-details {
@@ -53,11 +56,29 @@
     text-decoration: none;
     font-size: 18px;
 }
-
+.test:hover{
+    color: blue;
+}
 .tast {
     color: white;
     text-decoration: none;
-    font-size: 15px;}
+    font-size: 15px;
+}
+.footer-social{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+.footer-socials{
+    height: auto;
+    width: 30px;
+    cursor: pointer;
+    transition: transform 0.5s ease-in-out;
+}
+.footer-socials:hover{
+    transform: rotate(360deg);
+    
+}
 /* 
 @media(min-width:2400px){
     .contact {

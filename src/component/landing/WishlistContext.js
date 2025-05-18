@@ -1,4 +1,5 @@
 import { createContext, useContext, useEffect, useState } from 'react';
+import { toast } from 'react-toastify';
 
 const WishlistContext = createContext();
 
@@ -24,7 +25,7 @@ export const WishlistProvider = ({ children }) => {
   const toggleWishlist = async (coupon) => {
     const token = localStorage.getItem('token');
     if (!token) {
-      alert("Please login first.");
+      toast.warn("Please login first.");
       return;
     }
 
@@ -37,7 +38,7 @@ export const WishlistProvider = ({ children }) => {
           headers: { Authorization: `Bearer ${token}` }
         });
         setWishlist((prev) => prev.filter((w) => w?.coupon?._id !== coupon._id));
-        // alert('Removed from wishlist');
+        toast.success('Removed from wishlist');
       } else {
         const res = await fetch('https://coupon-backend-32op.onrender.com/api/wishlist/add', {
           method: 'POST',
@@ -51,7 +52,7 @@ export const WishlistProvider = ({ children }) => {
         if (res.ok) {
           const newItem = await res.json();
           setWishlist((prev) => [...prev, newItem]);
-          alert('Added to wishlist');
+          toast.success('Added to wishlist');
         }
       }
     } catch (err) {

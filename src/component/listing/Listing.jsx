@@ -1,6 +1,7 @@
 import './listingcss.css';
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { toast } from "react-toastify";
 
 function Listing() {
   const [title, setTitle] = useState('');
@@ -26,7 +27,7 @@ function Listing() {
 
     const upiRegex = /^[a-zA-Z0-9@.]+$/;
     if (!upiRegex.test(upiNumber)) {
-      alert('Invalid UPI number');
+      toast.error('Invalid UPI number');
       return;
     }
 
@@ -53,11 +54,11 @@ function Listing() {
       });
 
       if (response.ok) {
-        alert('Coupon uploaded successfully!');
+        toast.success('Coupon uploaded successfully!');
         fetchCoupons();
         navigate('/landing');
       } else {
-        alert('Error uploading coupon');
+        toast.warn('Error uploading coupon');
       }
     } catch (error) {
       console.error('Error:', error);
