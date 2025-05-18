@@ -1,5 +1,5 @@
 import './listingcss.css';
-import { useState, useEffect } from 'react';
+import { useState} from 'react';
 import { useNavigate } from 'react-router-dom';
 import { toast } from "react-toastify";
 
@@ -11,8 +11,8 @@ function Listing() {
   const [price, setPrice] = useState('');
   const [text, setText] = useState('');
   const [upiNumber, setUpiNumber] = useState('');
-  const [email, setEmail] = useState('');
-  const [coupons, setCoupons] = useState([]);
+  const [email] = useState('');
+  const [setCoupons] = useState([]);
   const navigate = useNavigate();
 
   // ✅ Safe fallback if user is not logged in
@@ -75,9 +75,9 @@ function Listing() {
     }
   };
 
-  useEffect(() => {
-    fetchCoupons();
-  }, []);
+  // useEffect(() => {
+  //   fetchCoupons();
+  // }, []);
 
   return (
     <div className='div11'>
