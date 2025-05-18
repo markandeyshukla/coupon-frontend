@@ -11,7 +11,7 @@ import Listing from "./pages/Listing/index.js"
 import Searchpage from "./pages/Searchpage/index.js";
 import Login from "./pages/Login/index.js";
 import Payment from "./pages/Payment/index.js";
-import { WishlistProvider } from "../../couponbarter/src/component/landing/WishlistContext.js";
+import { WishlistProvider } from "../src/component/landing/WishlistContext.js";
 import Copondetail from "./pages/Copondetail/index.js";
 
 const AppRouter = () => {
