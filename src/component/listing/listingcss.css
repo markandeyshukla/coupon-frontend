@@ -78,6 +78,20 @@ border-radius: 8px;
  font-size: 20px;
  color: white;
 }
+/* Optional: highlight effect */
+/* Highlight effect for Submit button */
+.highlight {
+  outline: 3px solid #4caf50;
+  box-shadow: 0 0 8px #4caf50;
+  transition: all 0.3s ease;
+}
+.submi-submit:hover{
+    transform: scale(0.95);
+  /* background-color: #0056b3; */
+  background-color: green;
+  /* box-shadow: 0 0 10px #007bff; */
+  transition: all 0.2s ease;
+}
 
 @media(max-width : 1024px){
     .div11{
