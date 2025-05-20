@@ -21,7 +21,7 @@ function Support() {
     const subject = `Support request from ${form.name}`;
     const body = `Name: ${form.name}%0D%0AEmail: ${form.email}%0D%0A%0D%0A${form.message}`;
 
-    window.location.href = `mailto:support@yourdomain.com?subject=${encodeURIComponent(subject)}&body=${body}`;
+    window.location.href = `mailto:tanishagrahari2018@gmail.com?subject=${encodeURIComponent(subject)}&body=${body}`;
   };
 
   return (
